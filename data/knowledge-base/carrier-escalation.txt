@@ -1,0 +1,5 @@
+Carrier inquiry procedure — DEMO POLICY, version 2026-09-01
+
+For delayed parcels, contact the carrier with the order identifier and the most recent tracking status. Record the carrier's response in the support case.
+
+A carrier inquiry does not itself approve a replacement or refund. Replacement eligibility is determined by the delivery exception policy. Do not promise a new delivery date unless the carrier provides one.

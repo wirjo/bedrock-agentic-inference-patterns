@@ -1,0 +1,11 @@
+{
+  "model_id": "global.openai.gpt-5.6-terra",
+  "input_per_million": 2.0,
+  "output_per_million": 12.0,
+  "cache_read_per_million": 0.2,
+  "cache_write_per_million": 2.5,
+  "cache_write_ttl": "30m",
+  "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-56-terra.html#model-card-openai-gpt-56-terra-pricing",
+  "checked_on": "2026-09-25",
+  "max_input_tokens": 272000
+}

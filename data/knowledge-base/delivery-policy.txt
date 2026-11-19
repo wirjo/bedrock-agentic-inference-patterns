@@ -1,0 +1,7 @@
+Delivery exception policy — DEMO POLICY, version 2026-09-01
+
+For an order whose carrier status is in_transit and which is at least 3 calendar days past its promised delivery date, a replacement is allowed.
+
+Both conditions are required: the status must be in_transit, and the delay must be at least 3 calendar days. If either fact is unknown, the support assistant must request the missing information before deciding.
+
+The support assistant may explain eligibility. Creating a replacement order requires a separate authorized action; answering the question does not create a replacement.

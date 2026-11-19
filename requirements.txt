@@ -1,0 +1,15 @@
+# Model access and inference measurements
+openai[bedrock]==3.14.0
+boto3==1.43.33
+pandas==2.3.3
+jsonschema==4.26.0
+
+# Retrieval, agent orchestration, and MCP
+chromadb==1.5.9
+langgraph==1.2.12
+mcp==2.2.0
+anyio==4.15.1
+
+# Notebook kernel and browser interface
+ipykernel>=6.30,<8
+jupyterlab>=4.4,<5

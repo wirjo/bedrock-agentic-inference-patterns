@@ -1,0 +1,98 @@
+{
+  "order_id": "ORDER-1042",
+  "status": "in_transit",
+  "promised_delivery_date": "2026-09-11",
+  "as_of_date": "2026-09-15",
+  "days_late": 4,
+  "carrier": "Example Parcel",
+  "next_step": "contact_carrier",
+  "warehouse": {
+    "id": "WH-EU-03",
+    "pick_wave": "WAVE-88217",
+    "packing_station": "PACK-17",
+    "carton_type": "C2",
+    "internal_processing_note": "Picked, scanned, checked, packed, and transferred to the outbound conveyor."
+  },
+  "line_items": [
+    {
+      "sku": "USB-C-DOCK-12",
+      "quantity": 1,
+      "fulfillment_reference": "FUL-67281",
+      "inventory_reservation": "RES-19276"
+    }
+  ],
+  "audit_events": [
+    {
+      "timestamp": "2026-09-07T09:00:00Z",
+      "event": "order_received",
+      "system": "checkout",
+      "detail": "Order accepted and queued for inventory allocation."
+    },
+    {
+      "timestamp": "2026-09-07T09:00:01Z",
+      "event": "inventory_reserved",
+      "system": "inventory",
+      "detail": "The inventory reservation was created for the requested line item."
+    },
+    {
+      "timestamp": "2026-09-07T09:00:02Z",
+      "event": "payment_authorized",
+      "system": "payments",
+      "detail": "Authorization confirmed; the order is ready for fulfillment."
+    },
+    {
+      "timestamp": "2026-09-08T07:00:00Z",
+      "event": "wave_assigned",
+      "system": "warehouse",
+      "detail": "Assigned to the next outbound warehouse picking wave."
+    },
+    {
+      "timestamp": "2026-09-08T07:11:00Z",
+      "event": "pick_started",
+      "system": "warehouse",
+      "detail": "A picker began collecting the line item from its inventory location."
+    },
+    {
+      "timestamp": "2026-09-08T07:15:00Z",
+      "event": "pick_completed",
+      "system": "warehouse",
+      "detail": "The line item was scanned and confirmed at the picking station."
+    },
+    {
+      "timestamp": "2026-09-08T07:20:00Z",
+      "event": "quality_check_completed",
+      "system": "warehouse",
+      "detail": "The packed item passed the outbound order verification check."
+    },
+    {
+      "timestamp": "2026-09-08T07:25:00Z",
+      "event": "label_created",
+      "system": "shipping",
+      "detail": "A shipping label and a carrier manifest entry were generated."
+    },
+    {
+      "timestamp": "2026-09-08T08:30:00Z",
+      "event": "carrier_handoff",
+      "system": "shipping",
+      "detail": "The carrier accepted the parcel from the outbound collection point."
+    },
+    {
+      "timestamp": "2026-09-09T14:00:00Z",
+      "event": "carrier_scan",
+      "system": "carrier",
+      "detail": "The parcel was scanned at a regional sorting facility."
+    },
+    {
+      "timestamp": "2026-09-11T19:00:00Z",
+      "event": "delivery_exception",
+      "system": "carrier",
+      "detail": "The promised delivery date passed without a delivery confirmation."
+    },
+    {
+      "timestamp": "2026-09-15T08:00:00Z",
+      "event": "support_snapshot",
+      "system": "support",
+      "detail": "The latest carrier status remains in transit and a carrier inquiry is the next step."
+    }
+  ]
+}

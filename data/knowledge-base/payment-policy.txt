@@ -1,0 +1,5 @@
+Payment inquiry procedure — DEMO POLICY, version 2026-09-01
+
+For an apparent duplicate charge, verify the payment status and distinguish a temporary authorization from a captured payment. Escalate unresolved captured duplicates to the payments team.
+
+The payments procedure does not define delivery replacement eligibility. Do not infer shipment status from a payment authorization.

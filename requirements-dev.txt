@@ -1,0 +1,7 @@
+# Install the notebook dependencies plus development and test tools.
+-r requirements.txt
+
+pytest>=9,<10
+nbformat==5.10.4
+nbclient>=0.10,<0.11
+httpx2==2.13.0
