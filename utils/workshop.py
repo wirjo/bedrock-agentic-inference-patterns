@@ -25,6 +25,9 @@ from typing import Any, Callable
 import boto3
 import openai
 import pandas as pd
+from dotenv import load_dotenv
+
+load_dotenv(Path(__file__).resolve().parent.parent / ".env", override=False)
 from .inference import (
     InferenceResponse,
     Message,
@@ -1219,8 +1222,9 @@ class Run:
         columns = {
             "step": "Step", "attempt": "Attempt", "status": "Result",
             "input_tokens": "Input", "output_tokens": "Output",
-            "reasoning_tokens": "Reasoning", "elapsed_s": "Seconds",
-            "backoff_s": "Retry wait",
+            "reasoning_tokens": "Reasoning",
+            "reported_usage_cost_usd": "Est. USD",
+            "elapsed_s": "Seconds", "backoff_s": "Retry wait",
         }
         return self.frame().reindex(columns=columns).rename(columns=columns).round(3)
 
@@ -1316,8 +1320,9 @@ def compare(*runs: Run, detailed: bool = False) -> pd.DataFrame:
         return frame
     columns = {
         "logical_model_calls": "Calls", "input_tokens": "Input",
-        "output_tokens": "Output", "elapsed_s": "Seconds",
-        "retries": "Retries", "reported_usage_cost_usd": "Reported USD",
+        "output_tokens": "Output", "reasoning_tokens": "Reasoning",
+        "elapsed_s": "Seconds", "retries": "Retries",
+        "reported_usage_cost_usd": "Reported USD",
         "usage_complete": "Usage complete",
     }
     if frame["model_id"].nunique() > 1:
